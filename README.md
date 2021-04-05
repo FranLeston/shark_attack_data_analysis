@@ -22,9 +22,11 @@ import numpy as np
 from wordcloud import WordCloud, ImageColorGenerator
 from PIL import Image
 
-
 #My Functions
 import src.limpieza_texto as lt
+#Sean B. Palmer script to calculate phases of the moon for a given date
+import src.moonphase as moon
+
 ```
 
 ## Instructions
