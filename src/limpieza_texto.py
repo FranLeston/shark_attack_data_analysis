@@ -1,5 +1,27 @@
 import numpy as np
+import pandas as pd
+
 import re
+import src.moonphase as moon
+
+from datetime import datetime
+
+
+
+def get_moon(x):
+    if type(x) is pd.Timestamp:
+        pos = moon.position(x)
+        phasename = moon.phase(pos)
+        return phasename
+    else:
+        return np.nan
+   
+def clean_date(x):
+    try:
+        datetime_object = datetime.strptime(x, '%d-%b-%Y')
+        return datetime_object
+    except:
+        return np.nan
 
 
 def clean_shark_species(x):
@@ -27,6 +49,7 @@ def filter_countries_by_attack_number(x):
         return True
     else:
         return False
+
 
 def filter_activities_by_attack_number(x):
     if len(x) > 40:
