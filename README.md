@@ -96,7 +96,7 @@ df_cleaned.to_csv("data/attacks_clean.csv")
 ## Plotting the data...
 Mostly I used seaborn countplots, histplots, and pie charts to show my information. 
 I had some fun using the Word Cloud library to show the frequency of injuries that appeared on the injuries data column.
-The result was this word cloud with an outline of a shark:
+The result was the following word cloud with an outline of a shark.
 
 ### Did Full Moons have something to do with the attacks?
 ![alt text](https://github.com/FranLeston/shark_attack_data_analysis/blob/main/images/moon_barplot.png?raw=true)
