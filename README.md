@@ -76,16 +76,16 @@ The result was this word cloud with an outline of a shark:
 ### WordCloud Injury Frequency
 ![alt text](https://github.com/FranLeston/shark_attack_data_analysis/blob/main/images/wordcloud_injuries.png?raw=true)
 
-### WordCloud Injury Frequency
-![alt text](https://github.com/FranLeston/shark_attack_data_analysis/blob/main/images/wordcloud_injuries.png?raw=true)
+### Top activities resulting in the most shark attacks
+![alt text](https://github.com/FranLeston/shark_attack_data_analysis/blob/main/images/activity_distribution_barplot.png?raw=true)
 
-### WordCloud Injury Frequency
-![alt text](https://github.com/FranLeston/shark_attack_data_analysis/blob/main/images/wordcloud_injuries.png?raw=true)
+### Countries with most attacks
+![alt text](https://github.com/FranLeston/shark_attack_data_analysis/blob/main/images/top_countries_barplot.png?raw=true)
 
-### WordCloud Injury Frequency
-![alt text](https://github.com/FranLeston/shark_attack_data_analysis/blob/main/images/wordcloud_injuries.png?raw=true)
+### Age Distribution - Male vs Female
+![alt text](https://github.com/FranLeston/shark_attack_data_analysis/blob/main/images/age_distribution_countplot.png?raw=true)
 
-### WordCloud Injury Frequency
-![alt text](https://github.com/FranLeston/shark_attack_data_analysis/blob/main/images/wordcloud_injuries.png?raw=true)
+### Fatality Rate, Male vs Female, Types of Incidences
+![alt text](https://github.com/FranLeston/shark_attack_data_analysis/blob/main/images/pie_charts.png?raw=true)
 
 
