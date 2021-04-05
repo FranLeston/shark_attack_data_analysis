@@ -51,6 +51,12 @@ df_cleaned = df.drop(columns=["Case Number","Unnamed: 22", "Unnamed: 23", "Name"
 ````
 After that, some columns needed renaming for better clarity and accesibility.
 
+Next, I checked for duplicate rows and rows with all NaN values:
+```python
+df_cleaned.dropna(axis = 0, how = 'all', inplace = True)
+df_cleaned.drop_duplicates(subset=list(df_cleaned.columns), inplace = True)
+```
+
 The Age, Sex and Fatal columns needed some cleansingm so I applied some manual functions to each of those columns.
 Also, I created a new column called Year Modern to save all the attacks that were post 1900. 
 ```python
