@@ -88,4 +88,7 @@ The result was this word cloud with an outline of a shark:
 ### Fatality Rate, Male vs Female, Types of Incidences
 ![alt text](https://github.com/FranLeston/shark_attack_data_analysis/blob/main/images/pie_charts.png?raw=true)
 
+### Top shark attacks by species
+![alt text](https://github.com/FranLeston/shark_attack_data_analysis/blob/main/images/species_barplot.png?raw=true)
+
 
