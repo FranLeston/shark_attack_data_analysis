@@ -34,14 +34,15 @@ place it in the data directory. You should first execute the code block in the "
 to view the plots. 
 
 ## What I wanted to show
-1. Show shark attacks by year since the year 1900 to present day.  
-2. Did shark attacks increase since the film JAWS released?
-3. Show the age distribution of the attacks. How many were male/female?
-4. What activities resulted in the most shark attacks?
-5. What species of shark is the most aggresive?
-6. What are the fatality rates of shak attacks reported?
-7. What were the most frequent injuries?
-8. What were the countries with the most shark attacks?
+1. Did a Full Moon mean more shark attacks?
+2. Show shark attacks by year since the year 1900 to present day.  
+3. Did shark attacks increase since the film JAWS released?
+4. Show the age distribution of the attacks. How many were male/female?
+5. What activities resulted in the most shark attacks?
+6. What species of shark is the most aggresive?
+7. What are the fatality rates of shak attacks reported?
+8. What were the most frequent injuries?
+9. What were the countries with the most shark attacks?
 
 ## Preparing the data...
 
@@ -69,6 +70,22 @@ df_cleaned['Sex'] = df_cleaned['Sex'].apply(lt.clean_sex)
 df_cleaned['Year Modern'] = df_cleaned[df_cleaned['Year']>1900]['Year']
 ````
 
+### Calculating the moon phases
+I had to take all the valid dates in the dates column (day-month-year) and create a new Clean Dates Column.
+Then create a new column for the moon phase during that day. Here I used a script by Sean B. Palmer, where given a date object
+return the moon phase for that day in question. 
+
+Thank you Sean B Palmer:
+moonphase.py - Calculate Lunar Phase
+Author: Sean B. Palmer, inamidst.com
+Cf. http://en.wikipedia.org/wiki/Lunar_phase#Lunar_phase_calculation
+
+
+```python
+df_cleaned["Date Cleaned"] = df_cleaned['Date'].apply(lt.clean_date)
+df_cleaned["Moon"] = df_cleaned['Date Cleaned'].apply(lt.get_moon)
+```
+
 Finally, reset the index and export clean data csv file to the data folder. 
 ```python
 df_cleaned.to_csv("data/attacks_clean.csv")
@@ -78,6 +95,9 @@ df_cleaned.to_csv("data/attacks_clean.csv")
 Mostly I used seaborn countplots, histplots, and pie charts to show my information. 
 I had some fun using the Word Cloud library to show the frequency of injuries that appeared on the injuries data column.
 The result was this word cloud with an outline of a shark:
+
+### Did Full Moons have something to do with the attacks?
+![alt text](https://github.com/FranLeston/shark_attack_data_analysis/blob/main/images/moon_barplot.png?raw=true)
 
 ### WordCloud Injury Frequency
 ![alt text](https://github.com/FranLeston/shark_attack_data_analysis/blob/main/images/wordcloud_injuries.png?raw=true)
