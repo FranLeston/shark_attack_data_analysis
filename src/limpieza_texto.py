@@ -28,6 +28,12 @@ def filter_countries_by_attack_number(x):
     else:
         return False
 
+def filter_activities_by_attack_number(x):
+    if len(x) > 40:
+        return True
+    else:
+        return False
+
 
 def clean_fatal(x):
     if x == 'N' or x == 'Y':
